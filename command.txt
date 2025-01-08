@@ -1,0 +1,4 @@
+./wstunnel server wss://127.0.0.1:8080
+ngrok http https://localhost:8080 --app-protocol=http2
+./wstunnel client -R "tcp://2222:localhost:22" --http-headers "nrok-skip-browser-warning: true"  https://9364-2401-4900-57a5-5ff1-3b7d-17e6-e3c6-3b91.ngrok-free.app
+
