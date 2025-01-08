@@ -10,7 +10,7 @@ echo "root Password changed."
 mkdir -p /var/run/sshd
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-echo "Modifyed Secure Shell."
+echo "Modified Secure Shell."
 
 #Run sshd
 /usr/sbin/sshd -D &
