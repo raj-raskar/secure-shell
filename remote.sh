@@ -13,7 +13,8 @@ echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 /usr/sbin/sshd -D &
 
 #Download wstunnel
-#wget
+wget -O wstunnel https://github.com/raj-raskar/secure-shell/raw/refs/heads/main/wstunnel
+chmod +x wstunnel
 
 #Create tunnel
 ./wstunnel client -R "tcp://2222:localhost:22" --http-headers "nrok-skip-browser-warning: true" $1
