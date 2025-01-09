@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #Setup sshd
-apt-get install -qq -o=Dpkg::Use-Pty=0 openssh-server pwgen > /dev/null 2>&1 &
+apt-get install -qq -o=Dpkg::Use-Pty=0 openssh-server pwgen > /dev/null 2>&1
 echo "Installed."
 
 #Set root password
-echo root:toor | chpasswd > /dev/null 2>&1 &
+echo root:toor | chpasswd > /dev/null 2>&1
 echo "Chpasswd."
 mkdir -p /var/run/sshd
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
@@ -17,7 +17,7 @@ echo "Modified."
 echo "Started."
 
 #Download wstunnel
-wget -O wstunnel https://github.com/raj-raskar/secure-shell/raw/refs/heads/main/wstunnel > /dev/null 2>&1 &
+wget -O wstunnel https://github.com/raj-raskar/secure-shell/raw/refs/heads/main/wstunnel > /dev/null 2>&1
 chmod +x wstunnel
 echo "Downloaded."
 
